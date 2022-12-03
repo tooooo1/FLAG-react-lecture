@@ -6,7 +6,6 @@ const App=() => {
   const [halfAutoCount, setHalfAutoCount] = useState(0);
   const intervalId = useRef(null);
 
-
   useEffect(()=>{
     const intervalId = setInterval(
     ()=> setAutoCount(prev => prev+1),
@@ -30,18 +29,26 @@ const App=() => {
 
   return (
     <div>
-      <p>you clicked {count} times</p>
-      <button onClick={() => setCount((prev) => prev+1)}>
-        clickme
+      <div class = "box">
+      <p>{count}</p>
+      <button class = "orangebutton" onClick={() => setCount((prev) => prev+1)}>
+        click
       </button>
+      </div>
+      <div class = "box">
       <div>{autoCount}</div>
+      </div>
+      <div class = "box">
       <div>{halfAutoCount}</div>
-      <button onClick={startCounter}>
+      <div class = "buttongroup">
+      <button class = "orangebutton" onClick={startCounter}>
         START
       </button>
-      <button onClick={stopCounter}>
+      <button class = "graybutton" onClick={stopCounter}>
         STOP
       </button>
+      </div>
+      </div>
       
     </div>
   );

@@ -1,11 +1,91 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 25px;
+
 }
+
+.box {
+  width: 250px;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  border-radius: 20px;
+  background-color: #ffe9c7;
+  margin: 35px;
+}
+
+.buttongroup {
+  width: 250px;
+  height: 60px;
+  margin-top: 35px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+}
+
+.orangebutton {
+
+  background-color: rgb(255, 102, 0);
+
+  border-radius: 15px;
+
+  border: none;
+
+  color: white;
+
+  width: 90px;
+
+  height: 40px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 10px;
+
+ 
+
+}
+
+.graybutton {
+
+  background-color: gray;
+
+  border-radius: 15px;
+
+  border: none;
+
+  color: white;
+
+  width: 90px;
+
+  height: 40px;
+
+  text-align: center;
+
+  text-decoration: none;
+
+  display: inline-block;
+
+  font-size: 16px;
+
+  margin: 10px;
+
+ 
+
+}
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',

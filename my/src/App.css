@@ -36,3 +36,27 @@
     transform: rotate(360deg);
   }
 }
+
+.num{
+  margin: 7px;
+  font-size: 30px;
+  font-style: italic;
+}
+
+.btn{
+  margin: 10px;
+  background-color: brown;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.box{
+  
+  background-color: blanchedalmond;
+  width: 140px;
+  height: 140px;
+  padding:20px;
+  border:30px solid powderblue;
+  margin: 20px auto;
+  
+}

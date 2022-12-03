@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState} from 'react';
+import './App.css';
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -17,7 +18,8 @@ useEffect(()=>{
 
 const startCounter = () => {
   intervalId.current = setInterval(
-  () => setHalfAutoCount((prev)=>prev+1),400
+  () => setHalfAutoCount((prev)=>prev+1),
+  400
 )}
 
 
@@ -26,19 +28,29 @@ const stopCounter = () => {
 }
 
 return(
-  <div>
-    <p> You clicked {count} times</p>
-    <button onClick={()=> setCount((prev) => prev+1)}>
-      Click me
+  <div className='App'>
+
+    <div className='box'>
+    <p className='num'>{count}</p>
+    <button className="btn"  onClick={()=> setCount((prev) => prev+1)}>
+      CLICK
     </button>
-    <div>{autoCount}</div>
-    <div>{halfAutoCount}</div>
-  <button onClick me={startCounter}>
+    </div>
+
+    <div className='box'>
+    <div className='num'>{autoCount}</div>
+    </div>
+
+    <div className='box'>
+    <div className='num'>{halfAutoCount}</div>
+    <button className='btn' onClick me={startCounter}>
     START
-  </button>
-    <button onClick = {stopCounter}>
+    </button>
+    <button className='btn' onClick ={stopCounter}>
       STOP
     </button>
+    </div>
+
   </div>
 );
 }

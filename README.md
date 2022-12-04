@@ -1,7 +1,8 @@
-# FLAG-react-lecture
-FLAG react 강의
+# FLAG React 강의
 
-
+<div align="center">
+<img src="https://user-images.githubusercontent.com/77133565/204158513-587f935a-92e0-423e-a5ca-ed1277a8a105.png" width="600" />
+</div>
 
 ## 1. 브랜치 생성
 

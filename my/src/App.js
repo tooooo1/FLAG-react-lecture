@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
+import "./App.css";
 
 const App = () => {
   const [count, setCount] = useState(0);
@@ -27,18 +28,45 @@ const App = () => {
   
   return (
     <div>
-      <p>You clicked {count} times</p>
-      <button onClick={() => setCount((prev) => prev+1)}>
-        Click me
+      
+      <div className="background">
+        
+        <p>{count}</p>
+
+      <button className="button1" onClick={() => setCount((prev) => prev+1)}>
+        CLICK
       </button>
+      
+      </div>
+
+      <div className="background">
+      
       <div>{autoCount}</div>
+      
+      </div>
+
+      <div className="background">
+      
       <div>{halfAutoCount}</div>
-      <button onClick={startCounter}>
+      
+      </div>
+      
+      <div className="background">
+      
+      <div className="buttongroup">
+      
+      <button className="button1" onClick={startCounter}>
         START
       </button>
-      <button onClick={stopCounter}>
+      
+      <button className="button2" onClick={stopCounter}>
         STOP
       </button>
+      
+      </div>
+      
+      </div>
+      
     </div>
   );
 }

@@ -1,0 +1,21 @@
+.App {
+  background-color: purple;
+}
+
+.dj{
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 20px;
+  padding-left: 3rem;
+}
+
+.wns{
+  box-sizing: border-box;
+  padding-left: 3rem;
+}
+

@@ -1,0 +1,13 @@
+.back {
+    background-color: mediumpurple;
+}
+
+.component {
+    display: flex;
+    border-radius: 20px;
+    align-items: center;
+    gap: 2rem;
+    border: 1px solid #FFFFFF;
+    padding-left: 2rem;
+    cursor: pointer;
+}

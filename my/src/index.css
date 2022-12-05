@@ -1,0 +1,21 @@
+body{
+  background-color: blueviolet;
+  padding-left: 50px;
+}
+
+.box{
+  width: 100%;
+  height: auto;
+  display: flex;
+  border-radius: 15px;
+  border: 1px solid white;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  padding-left: 10px;
+  align-items: center;
+  
+}
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

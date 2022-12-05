@@ -1,0 +1,13 @@
+.back {
+    background-color: blueviolet;
+}
+
+.component {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    padding-left: 3rem;
+    border: 1px solid white;
+    border-radius: 2rem;
+    cursor: pointer;
+}

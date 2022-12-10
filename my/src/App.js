@@ -1,5 +1,7 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import ReturnPage from './ReturnPage'
+import NotFound from './NotFound'
 
 const data = [
   {
@@ -48,16 +50,25 @@ const data = [
 
 const App = () => {
   return (
+    
     <div className="back">
+      <BrowserRouter>
       {data.map((v) => (
         <div className="component" key={v.title}>
+          <Routes>
+          
           <img src={v.thumbnailUrl} alt="1" />
+          <Route path='v.thumbnailUrl' element={<ReturnPage />}></Route>
+          <Route path='*' element={<NotFound />}></Route>
           <div>
             {v.title} / {v.id}
           </div>
+          </Routes>
         </div>
       ))}
+      </BrowserRouter>
     </div>
+    
   );
 };
 

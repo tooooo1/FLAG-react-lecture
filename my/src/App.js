@@ -1,4 +1,9 @@
 import './App.css'
+import React from 'react';
+import {BrowserRouter, Route, Routes, Link} from "react-router-dom";
+import Start from "./start";
+import About from "./About";
+import Contact from "./Contact";
 
 const data = [
   {
@@ -49,15 +54,29 @@ const data = [
 
 const App = () => {
   return (
-    <div className="out">
-      {data.map((v)=>(<div key={v.title}>
-          <div className="element">
-            {v.title} / {v.id}
+    <BrowserRouter>
+      <nav>
+        <Link to="/">Home</Link>
+        <Link to="about">About</Link>
+        <Link to="contact">Contact</Link>
+      </nav>
+      
+
+      <Routes>
+      <Route path="/" element={<Strart />} />
+      <Route path="about" element={<About />} />
+      <Route path="contact" element={<Contact />} />
+      </Routes>
+        <div className="out">
+          {data.map((v)=>(<div key={v.title}>
+              <div className="element">
+                {v.title} / {v.id}
+              </div>
+              <img src={v.thumbnailUrl} alt="사진" />
           </div>
-          <img src={v.thumbnailUrl} alt="사진" />
+          )) }
         </div>
-      )) }
-    </div>
+    </BrowserRouter>
   );
 }
 

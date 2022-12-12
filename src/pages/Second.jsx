@@ -1,9 +1,25 @@
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import Card from "components/Card";
+import { useEffect } from "react";
 
 const Second = () => {
+  const [data,setData] = useState({});
+  const location = useLocation();
+  const locationCity = location.state;
+
+  useEffect(() => {
+    axios("https://jsonplaceholder.typicode.com/photos")
+      .then((response) => response.data)
+      .then((res) => setData(res));
+  }, []);
+
   return (
     <Wrapper>
-      <div>위치 그림</div>
+      <div>{locationCity}</div>
+      {data?.map((v) => (
+      <Card id ={v.id} title={v.title}/>
+      ))}
     </Wrapper>
   );
 };

@@ -1,9 +1,29 @@
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import styled from "styled-components";
+import Card from "../components/card";
 
 const Second = () => {
+  const [data,setData] = useState([]);
+  const location = useLocation();
+  const locationCity = location.state;
+  
+  useEffect(() => {
+    axios("https://jsonplaceholder.typicode.com/todos")
+      .then((response) => response.data)
+      .then((json) => setData(json));
+}, []);
+
   return (
     <Wrapper>
-      <div>위치 그림</div>
+      <div>{locationCity}</div>
+      {data?.map((v) => (
+        <Card 
+        id={v.id}
+        title={v.title}
+      />
+      ))}
     </Wrapper>
   );
 };

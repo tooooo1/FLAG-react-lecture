@@ -1,9 +1,9 @@
 import './App.css';
+import './Main.js';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import ReturnPage from './ReturnPage';
 import NotFound from './NotFound';
 import Main from './Main';
-
 
 const App = () => {
   return (
@@ -15,7 +15,6 @@ const App = () => {
         <Route path='/*' element={<NotFound />}></Route>
       </Routes>
     </BrowserRouter>
-    
   );
 };
 

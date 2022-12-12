@@ -47,7 +47,6 @@ const data = [
 
 const Main = () => {
   return (
-    
     <div className="back">
       {data.map((v) => (
         <div className="component" key={v.title}>

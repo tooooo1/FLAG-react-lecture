@@ -1,3 +1,7 @@
+import { BrowserRouter as Router, Route, Link, Switch} 
+        from "react-router-dom";
+        
+import Page1 from "./Components/page1"
 import "./Second.css";
 
 const data = [
@@ -48,14 +52,24 @@ const data = [
 const Second = () => {
   return (
     <div className="back">
+       <Router>
+        <Switch>
+          <Route exact path="/" element={<h1>Home Page</h1>} />
+          <Route exact path="page1" element={<Page1 />} />
+        </Switch>
       {data.map((v) => (
         <div className="component" key={v.title}>
           <img src={v.thumbnailUrl} alt="사진" />
           <div>
             {v.title} / {v.id}
+            <ui>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="page1">Page 1</Link></li>
+            </ui>
           </div>
         </div>
       ))}
+      </Router>
     </div>
   );
 };

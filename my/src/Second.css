@@ -11,3 +11,9 @@
     border-radius: 2rem;
     cursor: pointer;
 }
+
+.list ul li {
+    list-style: none;
+    margin: 42px;
+    text-align: center;
+}
